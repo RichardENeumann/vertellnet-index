@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>VERTELL.NET</title>
+		<style>
+			body {
+				background-color: black;
+				color: white;
+				font: 1rem Inconsolata, monospace;
+				width: 640px;
+			}	
+			a:link { color: white; }
+			a:visited { color: white; }
+			a:hover { 
+				color: black; 
+				background-color: white; 
+			}
+			td { padding: 0 0.5rem; }
+			.tb-bootloader { 
+				border: solid 1px;
+				border-collapse: collapse;	
+				width: 100%;		
+			}
+			.tb-bootloader th {
+				border-bottom: solid 1px; 
+				font-weight: normal;
+				padding: 0.3rem 0;
+			}
+			.bl-top td { padding: 0.3rem 0.5rem 0 0.5rem; }
+			.bl-middle { border-left: solid 1px; }
+			.bl-bottom td { padding: 0 0.5rem 0.3rem 0.5rem; }
+			.tb-directories td { padding: 0 1rem; } 
+			@keyframes cursorblinks { 0% { color: black; } }	
+			#console::after {
+				content: "_";
+				animation: cursorblinks 1.5s steps(2) infinite;
+			}
+		</style>	
+	</head>
+	<body>
+		<table class="tb-bootloader">
+			<tr>
+				<th colspan=4>VERTELL.NET BIOS System Configuration (C) 1970</th>
+			</tr>	
+			<tr class="bl-top">
+				<td>Main Processor</td><td>: 80286</td>
+				<td class="bl-middle">Base Memory Size</td><td>: 640KB</td>
+			</tr>	
+			<tr>
+				<td>Numeric Processor</td><td>: Present</td>
+				<td class="bl-middle">Ext. Memory Size</td><td>: 7168KB</td>
+			</tr>
+			<tr>
+				<td>Floppy Drive A</td><td>: 1,44MB 3&frac12;"</td>
+				<td class="bl-middle">Hard Disk C: Type</td><td>: 47</td>
+			</tr>	
+			<tr>
+				<td>Floppy Drive B</td><td>: None</td>
+				<td class="bl-middle">Hard Disk D: Type</td><td>: None</td>
+			</tr>
+			<tr>
+				<td>Display Type</td><td>: VGA/PGA/EGA</td>
+				<td class="bl-middle">Serial Port(s)</td><td>: 3F8, 2F8</td>
+			</tr>	
+			<tr class="bl-bottom">
+				<td>BIOS Date</td><td>: 12/06/96</td>
+				<td class="bl-middle">Parallel Port(s)</td><td>: 378</td>
+			</tr>				
+		</table>	
+		<p>Starting VERTELL.NET OS...</p>
+		<p>C:\&gtdir</p>
+		<table class="tb-directories">
+			<tr>
+				<td><a href="wb/" 	onmouseover="document.getElementById('console').innerHTML += 'cd wb';"
+									onmouseout="document.getElementById('console').innerHTML = 'C:\\&gt;';">wb</a>
+				</td>
+				<td>&lt;DIR&gt;</td>
+				<td>15.02.21</td>
+				<td>20:38</td>
+			</tr>
+		</table>
+		<p id="console">C:\&gt;</p>
+	</body>
+</html>
